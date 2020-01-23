@@ -10,15 +10,18 @@ import sys
 
 # Print out the command line arguments in sys.argv, one per line:
 # YOUR CODE HERE
-print(sys.argv)
+#print(sys.argv) tried this but doesnt print one per line just prints as a list
+for a in sys.argv:
+    print(a)
 
 # Print out the OS platform you're using:
 # YOUR CODE HERE
 print(sys.getwindowsversion())
-
+print(sys.platform)
 # Print out the version of Python you're using:
 # YOUR CODE HERE
 print(sys.version)
+print(sys.version_info)
 
 
 import os

@@ -22,3 +22,18 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+def print_cal():
+  u_i = input("14_cal.py month [year]")
+  elif len(u_i) <= 2 and u_i:
+      print(calendar.TextCalendar(calendar.SUNDAY).formatmonth(2020, int(u_i)))
+  elif len(u_i) > 2 and type(int(u_i[2:])) == int and type(int(u_i[0:2])) == int:
+      print(calendar.TextCalendar(calendar.SUNDAY).formatmonth(int(u_i[2:]), int(u_i[0:2])))
+  elif not u_i:
+      print(calendar.TextCalendar(calendar.SUNDAY).formatmonth(2020, 1))
+  elif type(int(u_i[2:])) != int or type(int(u_i[0:2])) != int:
+      print('you must give a year and month to do this operation!')
+
+print_cal()
+
+
